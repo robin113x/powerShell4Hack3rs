@@ -17,4 +17,12 @@ This document provides a quick reference for using basic PowerShell commands and
 | **Unblock Script**           | Unblock a downloaded PowerShell script               | `Unblock-File -Path "C:\path\to\your\script.ps1"`                                                                                                                                                                               |
 |                              | Unblock multiple scripts                             | `Get-ChildItem -Path "C:\path\to\your\scripts\*.ps1" \| Unblock-File`                                                                                                                                                              |
 
+
+# Encode the command
+`$command = "Get-Process | Where-Object { $_.Handles -gt 100 }"`
+`$encodedCommand = [Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes($command))`
+
+# Execute the encoded command
+`powershell.exe -EncodedCommand $encodedCommand `|
+```
 For more detailed information, you can visit [ss64.com](https://ss64.com/ps/).
