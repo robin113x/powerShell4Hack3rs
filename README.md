@@ -16,7 +16,7 @@ This document provides a quick reference for using basic PowerShell commands and
 | **Command Example**          | Get Command with Wildcard                            | `Get-Command -Name *FireWall*`                                                                                                                                                                                                  |
 | **Unblock Script**           | Unblock a downloaded PowerShell script               | `Unblock-File -Path "C:\path\to\your\script.ps1"`                                                                                                                                                                               |
 |                              | Unblock multiple scripts                             | `Get-ChildItem -Path "C:\path\to\your\scripts\*.ps1" \| Unblock-File`                                                                                                                                                              |
-
+| **CMDLETS**   | Get all cmdlets available                              | `Get-Command -CommandType Cmdlet` \| `Get-Help Get-process -full`                                                                                                                                                                                       |
 
 # Encode the command
 `$command = "Get-Process | Where-Object { $_.Handles -gt 100 }"`
