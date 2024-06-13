@@ -17,7 +17,8 @@ This document provides a quick reference for using basic PowerShell commands and
 | **Unblock Script**           | Unblock a downloaded PowerShell script               | `Unblock-File -Path "C:\path\to\your\script.ps1"`                                                                                                                                                                               |
 |                              | Unblock multiple scripts                             | `Get-ChildItem -Path "C:\path\to\your\scripts\*.ps1" \| Unblock-File`                                                                                                                                                              |
 | **CMDLETS**   | Get all cmdlets available                              | `Get-Command -CommandType Cmdlet` \| `Get-Help Get-process -full`                                                                                                                                                                                       |
-|      **Alias**                        | Get all aliases available                            | `Get-Alias` \| `Get-Alias -Definition Get_ChildItem `                                                                                                                                                                                                                   |
+|      **Alias**                        | Get all aliases available                            | `Get-Alias` \| `Get-Alias -Definition Get_ChildItem `           |
+
 
 # Encode the command
 `$command = "Get-Process | Where-Object { $_.Handles -gt 100 }"`
